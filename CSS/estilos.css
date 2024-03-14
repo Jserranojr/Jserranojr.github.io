@@ -1,107 +1,294 @@
-<!DOCTYPE html>
-<html lang="es">
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>linding</title>
-    <link rel="stylesheet" href="estilos.css">
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-  />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
+/*.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }*/
+  
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ text-decoration: none;
+ list-style: none;
 
-    <header class="header">
+}
 
-        <div class="menu container">
-            <a href="#" class="logo">Destino</a>
-            <input type="checkbox"  id="menu"/>   
-            <label for="menu">
-                <img src="images/image/menu.png" class="menu-icono" alt="">
-            </label>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Productos</a></li>
-                    <li><a href="#">Reservas</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
+body{
+    font-family: Arial, Helvetica, sans-serif ;
 
-            </nav>
-            <div class="icons">
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-instagram"></i>
+}
 
-            </div>
-         </div>
+.container{
+max-width: 1200px;
+margin: 0 auto;
+}
 
-
-         <div class="header-content container">
-
-            <div class="header-txt">
-                <h1>Elige tu playa favorita ahora</h1>
-                <p>
-                    Jua
-                </p>
-                <a href="#"class="btn-1">Seccion menu</a>
-
-            </div>
-         </div>
-         <div class="images">
-
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                        <img src="images/image/1.jpg" alt="">
-                        <h3>playa</h3>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <img src="images/image/2.jpg" alt="">
-                        <h3>Hotel</h3>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <img src="images/image/3.jpg" alt="">
-                        <h3>Naturaleza</h3>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <img src="images/image/4.jpg" alt="">
-                        <h3>Canoas</h3>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <img src="images/image/5.jpg" alt="">
-                        <h3>Lanchas</h3>
-                    </div>
-
-             
-                </div>
+.header {
+    background-image: url(images/image/bg.jpg);
+    background-position: center center ;
+    background-repeat: no-repeat ;
+    background-size:cover ;
+    display: flex;
+    position: relative;
+    min-height: 100vh;
+    align-items: center;
 
 
-            </div>
+}
 
-         </div>
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-         <div class="rows">
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+}
+
+.logo{
+color: #FFFFFF;
+font-size: 25px;
+font-weight: bold;
+
+}
+
+.menu .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a{
+    font-size: 18px ;
+    padding: 20px;
+    color: #FFFFFF;
+    display: block;
+    font-weight: bold;
+}
+
+.menu .navbar ul li a:hover{
+    color: #266371;
+}
+
+.icons{
+    display: flex;
+
+}
+ 
+.icons i {
+    font-size: 25px;
+    color: #FFFFFF;
+    margin-right: 15;
+    cursor: pointer;
+
+}
+
+.icons i:hover{
+color: #266371;
+
+}
+
+#menu{
+display: none;
+}
+
+.menu-icono{
+    width: 25px;
 
 
-         </div>
-    </header>
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
 
 
+.header-txt{
+    width: 40%;
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="script.js" ></script>
+}
+
+.header-txt h1{
+    font-size: 70px;
+    line-height: 80px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #266371;
+    margin-bottom: 25px;
+    font-family: "Roboto", sans-serif;
+}
+.header-txt p {
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: 500;
+    margin-bottom: 25px;
+
+
+}
+
+ .btn-1 {
+display: inline-block;
+padding: 13px 20px;
+border-radius: 25px;
+text-transform: uppercase;
+color: #FFFFFF;
+background-color: #099FA6;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0, 4);
+font-family: "Roboto", sans-serif;
+
+ }
+
+ .btn-1:hover{
+background-color: #266371;
+ }
+ 
+ .images {
+    width: 800px;
+    height: 380px;
+    position: absolute;
+    right: 0;
+
+ }
+
+ .swiper{
+width: 100%;
+height: 100%;
+
+ }
+
+.swiper-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.swiper-slide h3{
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    color: #FFFFFF;
+    font-family: "Roboto", sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.swiper-slide img{
+
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 10;
+
+}
+
+.rows{
+width: 180px;
+position: absolute;
+right: 620px;
+bottom: 280px;
+}
+
+.swiper-button-prev{
+    height: 50px;
+    width: 50px;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    font-size: 15px;
+
+}
+.swiper-button-next{
+    height: 50px;
+    width: 50px;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    font-size: 15px;
+
+}
+
+.swiper-button-prev::after{
+
+    font-size: 25px;
+    color: #FFFFFF;
+
+}
+.swiper-button-next::after{
+
+    font-size: 25px;
+    color: #FFFFFF;
+
+}
+
+@media(max-width:991px){
+
+    .menu{
+        padding: 30px;
+
+    }
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #3F3F3F48;
+        backdrop-filter: blur(5px);
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%
+    }
+    #menu:checked ~ .navbar{
+        display: initial;
+
+    }
+    .icons{
+        display: none;
+    }
+
+    .header {
+        padding: 80px 50px 30px;
+        align-items: self-start;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-txt{
+        text-align: center;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .header-txt h1 {
+        margin-bottom: 10px;
+    }
+    .images {
+        position: initial;
+        width: 300px;
+        height: 300px;
+    }
+    .rows {
+        display: none;
+        
+    }
+}
+
 
 </body>
 </html>
